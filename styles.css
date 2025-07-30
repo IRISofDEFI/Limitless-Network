@@ -9,24 +9,23 @@ body {
 
 header {
     padding: 40px 20px 20px;
-    /* Increased top padding to move content down */
     position: relative;
 }
 
 .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
     max-width: 1200px;
     margin: 0 auto 30px;
-    /* Added more space below nav */
-
+    display: flex;
+    justify-content: center;
+    /* center nav-group */
+    align-items: center;
 }
 
 .nav-group {
     display: flex;
-    gap: 15px;
-    padding-left: 20px;
+    gap: 20px;
+
 }
 
 .nav-group a {
@@ -41,16 +40,16 @@ header {
 }
 
 .launch-btn {
+    position: absolute;
+    right: 0;
     background-color: #00aaff;
-    padding: 20px 10px;
+    padding: 6px 12px;
     border: none;
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
     text-decoration: none;
-    font-size: 1.2em;
     font-size: 1.1em;
-    font-weight: 300px;
 }
 
 .v3-badge {
@@ -108,56 +107,69 @@ main p {
 }
 
 .features {
-    padding: 50px 20px;
-    background-color: #222a3f;
+    padding: 60px 20px;
+    background-color: #0f172a;
+    text-align: center;
 }
 
-.features h2 {
-    font-size: 2em;
+.feature-label {
     color: #00aaff;
+    font-size: 1.2em;
     margin-bottom: 10px;
 }
 
-.features p {
-    font-size: 1em;
+.feature-title {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.feature-description {
     color: #ccc;
-    margin-bottom: 30px;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    font-size: 1em;
 }
 
 .feature-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
     max-width: 1000px;
     margin: 0 auto;
+    text-align: left;
 }
 
 .feature-item {
-    flex: 1 1 calc(25% - 20px);
-    text-align: center;
+    background-color: #1e293b;
     padding: 20px;
-    background-color: #2e3850;
-    border-radius: 10px;
-    min-width: 200px;
+    border-radius: 12px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
 }
 
-.feature-icon {
-    font-size: 2em;
-    margin-bottom: 10px;
-    color: #00aaff;
+.icon-box {
+    background-color: #3b82f6;
+    color: white;
+    font-size: 1.5em;
+    padding: 12px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+    width: 48px;
 }
 
-footer {
-    padding: 20px;
-    background-color: #0d0f18;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.feature-content h4 {
+    color: #fff;
+    font-size: 1.1em;
+    margin-bottom: 5px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9em;
-    color: #888;
+.feature-content p {
+    color: #ccc;
+    font-size: 0.95em;
 }
